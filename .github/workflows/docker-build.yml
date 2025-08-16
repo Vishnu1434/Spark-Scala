@@ -62,7 +62,7 @@ jobs:
           REPO_LC=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
 
           # Construct the image name with the dynamic branch tag
-          IMAGE_NAME=ghcr.io/$REPO_LC:$BRANCH_NAME
+          IMAGE_NAME=ghcr.io/$REPO_LC/$REPO_LC:$BRANCH_NAME
 
           # Build the Docker image with the new tag
           docker build -t $IMAGE_NAME .
