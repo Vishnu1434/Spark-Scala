@@ -50,6 +50,6 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 tasks.withType(ShadowJar) {
     zip64 true
     archiveBaseName.set("app")
-    archiveClassifier.set("")  // no "-all" suffix
-    archiveVersion.set("")
+//    archiveClassifier.set("")  // no "-all" suffix
+//    archiveVersion.set("")
 }
