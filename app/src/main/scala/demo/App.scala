@@ -6,7 +6,7 @@ object App {
   def main(args: Array[String]): Unit = {
     println("Hello from App")
 
-    val spark = SparkSession.builder().appName("spark-scala").master("local[*]").getOrCreate()
+    val spark = SparkSession.builder().appName("spark-scala").getOrCreate()
 
     val df = spark.emptyDataFrame
 
