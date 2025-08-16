@@ -6,8 +6,6 @@ object App {
   def main(args: Array[String]): Unit = {
     println("Hello from App")
 
-    // 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 PM
-
     val spark = SparkSession.builder().appName("spark-scala").master("local[*]").getOrCreate()
 
     val df = spark.emptyDataFrame
