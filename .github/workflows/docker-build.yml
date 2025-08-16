@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: write  # required to publish to GHCR
+
     steps:
       # Checkout repo
       - name: Checkout source
@@ -46,7 +50,7 @@ jobs:
 
       # Build Docker image
       - name: Build Docker image
-        run: |
+        run: |  
           IMAGE_NAME=ghcr.io/${{ github.repository }}/spark-scala-app:latest
           docker build -t $IMAGE_NAME .
           echo "IMAGE_NAME=$IMAGE_NAME" >> $GITHUB_ENV
